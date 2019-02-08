@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hexagon</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      body,
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hexagon {
+        width: 100pt;
+        height: 100pt;
+        background: linear-gradient(
+            0deg,
+            hsla(0, 100%, 50%, 1),
+            hsla(0, 100%, 50%, 0)
+          ),
+          linear-gradient(
+            120deg,
+            hsla(120, 100%, 50%, 1),
+            hsla(120, 100%, 50%, 0)
+          ),
+          linear-gradient(
+            240deg,
+            hsla(240, 100%, 50%, 1),
+            hsla(240, 100%, 50%, 0)
+          );
+
+        margin: 2.5pt;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      }
+      .bottom.left {
+        transform: translate(157.5pt, -80pt);
+      }
+      .top.left {
+        transform: translate(262.5pt, 80pt);
+      }
+      .bottom.right {
+        transform: translate(-157.5pt, -80pt);
+      }
+      .top.right {
+        transform: translate(-262.5pt, 80pt);
+      }
+      .container {
+        animation: spin 60s linear infinite;
+      }
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hexagon top left"></div>
+      <div class="hexagon bottom left"></div>
+      <div class="hexagon left"></div>
+      <div class="hexagon center"></div>
+      <div class="hexagon right"></div>
+      <div class="hexagon bottom right"></div>
+      <div class="hexagon top right"></div>
+    </div>
+  </body>
+</html>
