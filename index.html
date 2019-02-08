@@ -11,15 +11,15 @@
         height: 100vh;
         background-color: black;
       }
-      body,
-      .container {
+      body {
         display: flex;
         align-items: center;
         justify-content: center;
       }
       .hexagon {
+        display: inline-block;
         width: 100pt;
-        height: 100pt;
+        height: 115.47pt;
         background: linear-gradient(
             0deg,
             hsla(0, 100%, 50%, 1),
@@ -35,21 +35,33 @@
             hsla(240, 100%, 50%, 1),
             hsla(240, 100%, 50%, 0)
           );
-
-        margin: 2.5pt;
-        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        /* background: red; */
+        clip-path: polygon(
+          0 50%,
+          25% 13.043%,
+          75% 13.043%,
+          100% 50%,
+          75% 86.956%,
+          25% 86.956%
+        );
       }
-      .bottom.left {
-        transform: translate(157.5pt, -80pt);
+      .top {
+        transform: translate(102pt, -85pt);
       }
-      .top.left {
-        transform: translate(262.5pt, 80pt);
+      .bottom {
+        transform: translate(-102pt, 85pt);
       }
-      .bottom.right {
-        transform: translate(-157.5pt, -80pt);
+      .upper-left {
+        transform: translate(234pt, -42.5pt);
       }
-      .top.right {
-        transform: translate(-262.5pt, 80pt);
+      .lower-left {
+        transform: translate(131pt, 42.5pt);
+      }
+      .lower-right {
+        transform: translate(-131pt, 42.5pt);
+      }
+      .upper-right {
+        transform: translate(-234pt, -42.5pt);
       }
       .container {
         animation: spin 60s linear infinite;
@@ -63,13 +75,13 @@
   </head>
   <body>
     <div class="container">
-      <div class="hexagon top left"></div>
-      <div class="hexagon bottom left"></div>
-      <div class="hexagon left"></div>
+      <div class="hexagon upper-left"></div>
+      <div class="hexagon lower-left"></div>
+      <div class="hexagon top"></div>
       <div class="hexagon center"></div>
-      <div class="hexagon right"></div>
-      <div class="hexagon bottom right"></div>
-      <div class="hexagon top right"></div>
+      <div class="hexagon bottom"></div>
+      <div class="hexagon lower-right"></div>
+      <div class="hexagon upper-right"></div>
     </div>
   </body>
 </html>
