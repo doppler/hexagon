@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hexagon</title>
     <style>
+      html,
+      body {
+        box-sizing: border-box;
+      }
       body {
         width: 100vw;
         height: 100vh;
@@ -19,9 +23,9 @@
       }
       .hexagon {
         display: inline-block;
-        width: 100pt;
+        width: 200px;
         /* height: 115.47pt; */
-        height: 85.5pt;
+        height: 170px;
         background: linear-gradient(
             30deg,
             hsla(0, 100%, 50%, 1),
@@ -41,22 +45,22 @@
         clip-path: polygon(0 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
       }
       .top {
-        transform: translate(102pt, -85pt);
+        transform: translate(205px, -170px);
       }
       .bottom {
-        transform: translate(-102pt, 85pt);
+        transform: translate(-205px, 170px);
       }
       .upper-left {
-        transform: translate(234pt, -42.5pt);
+        transform: translate(465px, -85px);
       }
       .lower-left {
-        transform: translate(131pt, 42.5pt);
+        transform: translate(260px, 85px);
       }
       .lower-right {
-        transform: translate(-131pt, 42.5pt);
+        transform: translate(-260px, 85px);
       }
       .upper-right {
-        transform: translate(-234pt, -42.5pt);
+        transform: translate(-465px, -85px);
       }
       .container {
         position: absolute;
@@ -64,7 +68,6 @@
       }
       h1 {
         animation: spin 3600s linear infinite reverse;
-
         opacity: 0.75;
         z-index: 1;
         position: relative;
