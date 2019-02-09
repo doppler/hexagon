@@ -1,0 +1,25 @@
+{
+  "name": "hexagon",
+  "version": "1.0.0",
+  "description": "Just playing around with CSS.",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doppler/hexagon.git"
+  },
+  "keywords": [
+    "experiments",
+    "toys"
+  ],
+  "author": "David Rose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doppler/hexagon/issues"
+  },
+  "homepage": "https://doppler.github.io/hexagon",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
