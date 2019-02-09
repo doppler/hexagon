@@ -71,6 +71,9 @@
         position: absolute;
         animation: spin 60s linear infinite;
       }
+      .container.second {
+        animation: spin 60s linear infinite reverse;
+      }
       h1 {
         animation: spin 3600s linear infinite reverse;
         opacity: 0.75;
@@ -100,6 +103,15 @@
   <body>
     <h1>HEXAGONS</h1>
     <div class="container">
+      <div class="hexagon upper-left"></div>
+      <div class="hexagon lower-left"></div>
+      <div class="hexagon top"></div>
+      <div class="hexagon center"></div>
+      <div class="hexagon bottom"></div>
+      <div class="hexagon lower-right"></div>
+      <div class="hexagon upper-right"></div>
+    </div>
+    <div class="container second">
       <div class="hexagon upper-left"></div>
       <div class="hexagon lower-left"></div>
       <div class="hexagon top"></div>
