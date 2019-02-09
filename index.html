@@ -9,6 +9,8 @@
       html,
       body {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
       body {
         width: 100vw;
@@ -18,13 +20,16 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
       }
       .hexagon {
+        position: absolute;
+        top: -85px;
+        left: -100px;
         display: inline-block;
         width: 200px;
-        /* height: 115.47pt; */
         height: 170px;
         background: linear-gradient(
             30deg,
@@ -45,22 +50,22 @@
         clip-path: polygon(0 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
       }
       .top {
-        transform: translate(205px, -170px);
+        transform: translateY(-170px);
       }
       .bottom {
-        transform: translate(-205px, 170px);
+        transform: translateY(170px);
       }
       .upper-left {
-        transform: translate(465px, -85px);
+        transform: translate(-150px, -85px);
       }
       .lower-left {
-        transform: translate(260px, 85px);
+        transform: translate(-150px, 85px);
       }
       .lower-right {
-        transform: translate(-260px, 85px);
+        transform: translate(150px, 85px);
       }
       .upper-right {
-        transform: translate(-465px, -85px);
+        transform: translate(150px, -85px);
       }
       .container {
         position: absolute;
